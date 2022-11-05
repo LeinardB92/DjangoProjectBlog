@@ -4,7 +4,7 @@ from django.utils import timezone
 
 # Create your models here.
 
-class Post(models.Model):
+class Posst(models.Model):
     # parece ser que al inicializar los atributos del modelo Post (y 
     # cualquiera en general), es necesario indicar el tipo de dato con 
     # las fuciones, como, .CharField, TextFiel, etc.
@@ -25,4 +25,4 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+Posst.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
